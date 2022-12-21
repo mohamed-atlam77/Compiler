@@ -1,0 +1,15 @@
+
+/* this is a simple program that 
+takes an integer number
+then, check if this number equals to 5 or not
+*/
+
+// x is the checked number 
+int y/**/=55; // what is your name?
+
+// check if x equals to 5 or not
+        if(x==100) 
+{cout<<"Equal to 5";}
+        else
+ {cout<<"Not Equal to 5";}
+

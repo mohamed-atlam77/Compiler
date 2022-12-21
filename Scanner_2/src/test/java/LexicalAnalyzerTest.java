@@ -93,4 +93,21 @@ public class LexicalAnalyzerTest {
     void test14(){
         Assertions.assertEquals(TokenClass.SEMICOLON, LexicalAnalyzer.lexicalAnalyze(";"));
     }
+
+    @Test
+    void test15(){
+        Assertions.assertEquals(TokenClass.MULTILINE_COMMENT, LexicalAnalyzer.lexicalAnalyze("/*asdmasfmasf87?!,?._'@" +
+                "=-+ asd\tsdfa  \n" +
+                "asdasdasdasdasdasdasda68**/"));
+    }
+
+    @Test
+    void test16(){
+        Assertions.assertEquals(TokenClass.SINGLELINE_COMMENT, LexicalAnalyzer.lexicalAnalyze("// mohamed."));
+    }
+
+    @Test
+    void test17(){
+        Assertions.assertEquals(TokenClass.INVALID, LexicalAnalyzer.lexicalAnalyze("// mohamed.\n "));
+    }
 }
